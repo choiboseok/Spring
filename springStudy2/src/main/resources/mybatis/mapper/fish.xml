@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.future.my.fish.dao.IFishDAO">
+	<select id="getInfo" resultType="FishVO"> <!-- mybatis-config.xml 파일에서 alias 설정 필수 -->
+	
+	SELECT title, img
+	FROM fish_tank
+	
+	</select>
+	
+	
+</mapper>

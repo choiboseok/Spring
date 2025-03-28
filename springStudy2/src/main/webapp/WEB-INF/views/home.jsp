@@ -19,31 +19,33 @@
     <body>
         <!-- Navigation-->
         <jsp:include page="/WEB-INF/inc/top.jsp"></jsp:include>
+        
         <!-- Header-->
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
                 </div>
             </div>
         </header>
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
+<!--            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"> -->
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-<%--                 	<c:forEach items=${arr} var="fish"> --%>
+                	<c:forEach items="${arr }" var="fish">
 	                    <div class="col mb-5">
 	                        <div class="card h-100">
 	                            <!-- Product image-->
-	                            <img class="card-img-top" src=${fish.Img } alt="..." />
+	                            <img class="card-img-top" src=${fish.img } alt="..." />
 	                            <!-- Product details-->
+<!-- 	                        <div class="card-body p-4"> -->
 	                            <div class="card-body p-4">
 	                                <div class="text-center">
 	                                    <!-- Product name-->
-	                                    <h5 class="fw-bolder">${fish.Title }</h5>
+	                                    <h6 class="fw-bolder">${fish.title }</h6>
 	                                    <!-- Product price-->
-	                                    $40.00 - $80.00
+	                                    ${fish.price }
 	                                </div>
 	                            </div>
 	                            <!-- Product actions-->
@@ -52,7 +54,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-<%--                     </c:forEach> --%>
+	                </c:forEach>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
@@ -233,6 +235,7 @@
                 </div>
             </div>
         </section>
+        
         <!-- Footer-->
         <jsp:include page="/WEB-INF/inc/footer.jsp"></jsp:include>
         <!-- Bootstrap core JS-->

@@ -3,7 +3,7 @@
 <mapper namespace="com.future.my.fish.dao.IFishDAO">
 	<select id="getInfo" resultType="FishVO"> <!-- mybatis-config.xml 파일에서 alias 설정 필수 -->
 	
-	SELECT title, img
+	SELECT title, img, price
 	FROM fish_tank
 	
 	</select>
